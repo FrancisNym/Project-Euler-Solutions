@@ -4,11 +4,12 @@ Largest Prime Factor of 600851475143
 '''
 
 Number = 600851475143
-RootNumber = int((600851475143)**0.5)
 
 def IsPrime(Num):
     CheckUpTo = int(Num**0.5)
-    for i in range(2,CheckUpTo):
+    if Num <2:
+        return False
+    for i in range(2,CheckUpTo+1):
         if Num % i == 0:
             return False
     return True
