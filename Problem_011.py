@@ -1,4 +1,4 @@
-with open("data.txt") as file:
+with open("Problem_011Data.txt") as file:
     lines = []
     for line in file:
         lines.append(line.strip())
