@@ -17,3 +17,6 @@ def solution():
         current_num += 1
 
 print(solution())
+
+
+# This solution is very brute force, there is definitely a more efficient way to solve with some maths
