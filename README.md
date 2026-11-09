@@ -8,4 +8,4 @@ Each problem has its own file named "Problem_XXX.py"
 
 I aim for efficient solutions, though they aren’t always optimal.
 
-All solutions in this repo are made completely by me with no online reference or AI assistance before or during solving.
+All solutions in this repo are made entirely by me with no online reference or AI assistance before or during solving.
