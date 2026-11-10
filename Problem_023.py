@@ -23,8 +23,8 @@ def Solution():
     for i in range(len(all_abundants)):
         for j in range(i,len(all_abundants)):
             all_sum_2_abundants.append(all_abundants[i]+all_abundants[j])
-    all_sum_2_abundants.sort()
     all_sum_2_abundants = list(set(all_sum_2_abundants))
+    all_sum_2_abundants.sort()
     for i in range(len(all_sum_2_abundants)):
         if all_sum_2_abundants[i] > 28123:
             index = i
