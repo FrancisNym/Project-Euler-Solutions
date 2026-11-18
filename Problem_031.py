@@ -1,6 +1,9 @@
 def Solution():
-    return (1+1+1+1+1+1+1)+(39+19+19+9+3+1)+(19+19+9+3+1)+(9+3+1)+(3+1)+(1)
+    coins = [1,2,5,10,20,50,100,200]
+    ways = [1] + [0]*200
+    for i in coins:
+        for amount in range(i, 201):
+            ways[amount] += ways[amount-i]
+    return ways[200]
 
 print(Solution())
-# 1 2 3 4 5 6 7 8 9 10 11
-# 1 1 1 1 2 2 2 2 2 4  4 
