@@ -19,29 +19,27 @@ def GenPerms(lst):
         for j in perms_rest:
             all_lsts.append([start_val]+j)
     return all_lsts
+    
+
+
 
 def Solution():
     total = 1
-    nums = list(range(3,100))
-    flag = True
+    nums = list(range(3,1000000))
     for i in nums:
-        all_perms = GenPerms(str(i).split())
+        numlist = list(map(int,str(i)))
+        all_perms = GenPerms(numlist)
+        flag = True
         for j in all_perms:
-            string = ""
-            for k in j:
-                string += k
+            j = map(str,j)
+            string = "".join(j)
             if not is_prime(int(string)):
                 flag = False
+            if int(string) in nums:
+                nums.remove(int(string))
         if flag:
-            for j in all_perms:
-                string = ""
-                for k in j:
-                    string += k
-                if int(string) in nums:
-                    nums.remove(int(string))
-                    total += 1
-        flag = True
-    return total
+            total += len(numlist)
+    return total-1 #account for 11
 
 
 print(Solution())
